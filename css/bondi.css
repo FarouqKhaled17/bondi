@@ -1,0 +1,358 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --sec-color: #eff7fa;
+}
+body {
+  font-family: "roboto", sans-serif;
+}
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .nav-item a {
+  text-transform: capitalize;
+}
+.navbar .nav-item a {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: green;
+}
+.navbar .search svg:hover {
+  color: rgb(198, 211, 211);
+}
+.navbar .search:hover {
+  border-left: rgb(198, 211, 211) solid 1px;
+}
+
+.navbar .search {
+  border-left: 2px solid var(--green-color);
+
+  cursor: pointer;
+  transition: border-left 0.3s;
+}
+.navbar .search svg {
+  color: var(--green-color);
+  transition: color 0.3s;
+  font-size: 18px;
+}
+
+.navbar .bar:focus {
+  box-shadow: none;
+}
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: 100vh;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.main-btn:hover {
+  background-color: var(--yellow-color);
+  color: var(--red-color);
+}
+
+/** features */
+
+.features .title img {
+  transition: transform 0.6s;
+}
+.features .title::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+.features .title img:hover {
+  transform: scale(1.2);
+}
+.features .icon {
+  height: 200px;
+}
+.features .icon svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon .num {
+  font-size: 12rem;
+  color: var(--sec-color);
+}
+.features .icon {
+  color: var(--green-color);
+}
+.features h4 {
+  color: var(--yellow-color);
+}
+
+.features .icon .pen {
+  transition: transform 0.4s, color 0.4s;
+}
+
+.features .icon .pen:hover {
+  transform: scale(1.4);
+  color: var(--dark-color);
+}
+
+/* our work */
+.our-work {
+  background-color: var(--sec-color);
+}
+.our-work .title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+}
+
+.our-work ul .active:hover {
+  background-color: var(--yellow-color);
+  color: var(--red-color);
+}
+
+.our-work .title img {
+  transition: transform 0.6s;
+  margin-top: 25px;
+}
+.our-work .title img:hover {
+  transform: scale(1.4);
+}
+.our-work .links li {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.our-work .links li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work .box {
+  overflow: hidden;
+  position: relative;
+  padding: 5px;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: #33d1cc74;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 10px));
+  transition: 0.3s;
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/*? stuff */
+.stuff .title img {
+  transition: transform 0.6s;
+}
+.stuff .title::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+.stuff .title img:hover {
+  transform: scale(1.2);
+}
+.stuff .txt {
+  max-width: 500px;
+}
+
+.stuff .img {
+  transition: filter 0.3s;
+}
+.stuff .img:hover {
+  filter: drop-shadow(8px 8px 8px var(--green-color));
+}
+
+.stuff .img {
+  position: relative;
+}
+.stuff .img::before {
+  content: "";
+  width: 63%;
+  height: 82%;
+  position: absolute;
+  background-color: #191f3f94;
+  left: 90px;
+  top: 30px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.stuff .img:hover::before {
+  opacity: 1;
+}
+
+.stuff .roll {
+  position: relative;
+}
+.stuff .roll::before {
+  content: "";
+  width: 3px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  top: 7px;
+  left: -5px;
+  background-color: rgb(203, 20, 20);
+  transition: height 0.3s;
+}
+.stuff .roll:hover::before {
+  height: 32px;
+}
+
+/*! team */
+.team {
+  background-color: var(--sec-color);
+}
+.team .text h2 {
+  color: var(--yellow-color);
+}
+.team .row h2 {
+  background-color: var(--green-color);
+  color: white;
+}
+
+.team .row .box {
+  transition: transform 0.3s, filter 0.3s, border 0.3s;
+}
+.team .row .box:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(5px 5px 5px rgba(144, 9, 9, 0.715));
+  border: var(--red-color) solid 1px;
+}
+.projects {
+  background-color: var(--dark-color);
+}
+.blog .title::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+
+.blog .title img {
+  transition: transform 0.3s;
+}
+.blog .title img:hover {
+  transform: scale(1.2);
+}
+
+/* subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe ::placeholder {
+  color: white;
+}
+
+.subscribe .sub-btn:hover {
+  background-color: darkred;
+  color: var(--yellow-color);
+}
+
+/*! footer */
+
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .copyright p > span {
+  color: var(--green-color);
+}
+
+footer .copyright div span {
+  color: var(--yellow-color);
+}
+
+footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+
+footer .contact ul li {
+  padding-top: 20px;
+  transition: transform 0.3s;
+}
+
+footer .contact ul li:hover {
+  transform: scale(1.2);
+}
+
+footer .fa-facebook {
+  background-color: #1877f2;
+}
+
+footer .fa-twitter {
+  background-color: #1da1f2;
+}
+
+footer .fa-linkedin {
+  background-color: #0a66c2;
+}
+
+footer .fa-youtube {
+  background-color: #ff0000;
+}
+
+footer .links,
+.about {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+footer .links li:hover,
+footer .about li:hover {
+  color: var(--yellow-color);
+}
